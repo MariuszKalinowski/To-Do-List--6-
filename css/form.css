@@ -1,0 +1,104 @@
+.form {
+margin: 20px;
+}
+
+.form__header {
+    margin-top: 50px;
+    
+}
+
+.form__element {
+    margin-top: 2px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+.form__element--first {
+    margin-top: 2px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 15%;
+    gap: 20px;
+    
+}
+
+.form__newTask {
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc
+}
+
+.form__submit {
+    
+    padding: 10px;
+    width: 100%;
+    font-size: medium;
+    color: white;
+    background-color: teal;
+
+}
+
+.form__section--last {
+    margin-top: 10px;
+}
+
+.form__tasksList {
+    background-color: white;
+    padding: 10px;
+    margin-top: 2px;
+    
+    
+}
+.form__task {
+    margin-top: 2px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    grid-gap: 0px 20px;
+    border-bottom: 1px solid #e2dfdf;
+    padding: 10px 20px;
+    display: grid;
+    align-items: center;
+}
+.form__task--done {     
+    margin-top: 2px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    grid-gap: 0px 20px;
+    border-bottom: 1px solid #e2dfdf;
+    padding: 10px 20px;
+    display: grid;
+    align-items: center;
+}
+
+.form__task--done .form__taskContent {
+    text-decoration: line-through;
+  
+}
+
+.form__removeTaskButton {
+    
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border: none;
+}
+
+.form__doneTaskButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 8px;
+}

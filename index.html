@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>To Do List!
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="js-form form">
+            <h1 class="form__header">
+                Lista zadań
+            </h1>
+            <section class="form__section">
+                <div class="form__element"> Dodaj nowe zadanie</div>
+                <div class="form__element--first">
+                    <input class="js-newTask form__newTask" placeholder="Co jest do zrobienia?">
+                    <button class="js-formSubmit form__submit">Dodaj zadanie</button>
+                </div>
+            </section>
+            <section class="form__section form__section--last">
+                <div class="form__element">Lista zadań <span class ="js-renderButtons"></span></div>
+                <div>
+                    <ul class="js-formTasksList form__tasksList">
+
+                    </ul>
+                </div>
+            </section>
+        </form>
+    </div>
+
+</body>
+
+</html>
