@@ -42,7 +42,12 @@ margin: 20px;
     font-size: medium;
     color: white;
     background-color: teal;
-
+    border: none;
+    transition: 1s;
+}
+.form__submit:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
 }
 
 .form__section--last {
@@ -88,17 +93,68 @@ margin: 20px;
     
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: hsl(0, 100%, 50%);
     color: white;
     padding: 8px;
     border: none;
+    transition: 0.5s;
+}
+
+.form__removeTaskButton:hover {
+    background-color: hsl(0, 100%, 60%);
 }
 
 .form__doneTaskButton {
     width: 30px;
     height: 30px;
     border: none;
-    background-color: green;
+    background-color: hsl(120, 100%, 25%);
     color: white;
     padding: 8px;
+    transition: 0.5s;
+}
+
+.form__doneTaskButton:hover {
+
+    background-color:hsl(120,100%,35%);
+}
+
+.form__task-hidden {
+    display: none;
+}
+.form__element--withButtons {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+}
+
+.form__renderButtons {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 1fr;
+}
+.form__renderButton {
+
+    background-color: white;
+    height: 35px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    color: teal;
+}
+.form__renderButton {
+
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    color: hsl(180, 100%, 25%);
+    transition: 1s;
+}
+
+.form__renderButton:hover {
+    color: hsl(180, 100%, 35%)
+}
+
+.form__renderButton:disabled {
+    background-color: white;
+    color: hsl(0, 0%, 80%);
 }
