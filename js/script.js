@@ -1,5 +1,11 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
+
+    const onHideDoneTasksButtonClick = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    }
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -58,6 +64,17 @@
             });
         });
     };
+
+    const bindOnHideDoneTasksButtonClick = () => {
+        const toggleHideTasksButton = document.querySelectorAll(".js-toggleHideTasksButton");
+
+        toggleHideTasksButton.forEach((hideTasks, index) => {
+            hideTasks.addEventListener("click", () => {
+            onHideDoneTasksButtonClick(index);
+            });
+        });
+    };
+
     const bindToggleDoneEvents = () => {
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -75,6 +92,7 @@
         for (const task of tasks) {
             htmlString += `
             <li 
+            ${hideDoneTasks && task.done ? 'class="form__task-hidden"' : ""}
             ${task.done ? "class=\"form__task--done\"" : "class=\"form__task\""}
             >
             <button class="js-done form__doneTaskButton">
@@ -100,21 +118,19 @@
         if (tasks.length > 0) {
             let toggleHideTasksButton = "";
 
-            if (tasks.every(task => task.done)) {
-                toggleHideTasksButton += `
-            <button class="js-toggleHideTasksButton form__toggleHideTasksButton"> Ukryj ukończone </button>        
-            <button class="js-allTasksDoneButton form__allTasksDoneButton" disabled> Ukończ wszystkie </button>
+            const isAllTasksDone = tasks.every((task) => task.done);
+            toggleHideTasksButton += `
+            <button class="js-toggleHideTasksButton form__renderButton"> ${hideDoneTasks === true ? "Pokaż" : "Ukryj"} ukończone </button>        
+            <button class="js-allTasksDoneButton form__renderButton" ${isAllTasksDone ? 'disabled' : ""} > Ukończ wszystkie </button>
             `;
-            } else toggleHideTasksButton += `
-            <button class="js-toggleHideTasksButton form__toggleHideTasksButton"> Ukryj ukończone </button>        
-            <button class="js-allTasksDoneButton form__allTasksDoneButton"> Ukończ wszystkie </button>
-            `
+
             document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
-        } else document.querySelector(".js-renderButtons").innerHTML = "";
+        };
     };
 
     const bindButtonsEvent = () => {
         bindToggleAllDoneTasks();
+        bindOnHideDoneTasksButtonClick();
         // if - jeżeli są zadania to wyrenderuj mi dwa przyciski "Ukryj ukończone" i "Ukoncz wszystkie", jeżeli jakieś zadania są ukryte to wyrenderuj mi
         // "Ukryj ukończone" i "Ukończ wszystkie", jeśli wszystkie zadania są ukończone, to zablokuj przycisk "Ukończ wszystkie"
     };
