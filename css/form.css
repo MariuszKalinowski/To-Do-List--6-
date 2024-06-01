@@ -73,7 +73,12 @@ max-width: 1200px;
     background-color: hsl(180, 100%, 35%);
     transform: scale(1.1);
 }
-
+@media(max-width: 767px) {
+    .form__submit:hover {
+        background-color: hsl(180, 100%, 35%);
+        transform: scale(1);
+    }
+}
 .form__section--last {
     margin-top: 10px;
 }
