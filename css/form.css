@@ -1,5 +1,18 @@
 .form {
 margin: 20px;
+max-width: 1200px;
+}
+@media(max-width: 992px) {
+    .form {
+        margin: 20px;
+        max-width: 992px;
+    }
+}
+@media(max-width: 767px) {
+    .form {
+        margin: 20px;
+        max-width: 767px;
+    }
 }
 
 .form__header {
@@ -22,9 +35,20 @@ margin: 20px;
     font-weight: 600;
     background-color: #fff;
     display: grid;
-    grid-template-columns: 1fr 15%;
-    gap: 20px;
-    
+    grid-template-columns: 1fr 180px;
+    gap: 20px; 
+}
+@media(max-width: 767px) {
+    .form__element--first {
+        margin-top: 2px;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px; 
+    }
 }
 
 .form__newTask {
@@ -124,7 +148,14 @@ margin: 20px;
 }
 .form__element--withButtons {
     display: grid;
-    grid-template-columns: 1fr 30%;
+    grid-template-columns: 1fr 336px;
+}
+    @media(max-width: 767px) {
+    .form__element--withButtons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;        
+    }
 }
 
 .form__renderButtons {
@@ -132,6 +163,13 @@ margin: 20px;
     align-items: end;
     grid-template-columns: 1fr 1fr;
 }
+    @media(max-width:767px) {
+        .form__renderButtons {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+        }
+    }
 .form__renderButton {
 
     background-color: white;
@@ -140,14 +178,14 @@ margin: 20px;
     font-size: 16px;
     border: none;
     color: teal;
-}
-.form__renderButton {
-
-    background-color: white;
     font-size: 16px;
     border: none;
-    color: hsl(180, 100%, 25%);
-    transition: 1s;
+    transition: 0.5s;
+}
+@media(max-width: 767px) {
+    .form__renderButton {
+        flex-basis: 100%;
+    }
 }
 
 .form__renderButton:hover {
