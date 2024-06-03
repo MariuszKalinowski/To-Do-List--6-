@@ -115,7 +115,7 @@
     };
 
     const renderButtons = () => {
-        if (tasks.length > 0) {
+        if (!tasks.length) {
             let toggleHideTasksButton = "";
 
             const isAllTasksDone = tasks.every((task) => task.done);
