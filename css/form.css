@@ -153,7 +153,9 @@ max-width: 1200px;
 }
 .form__element--withButtons {
     display: grid;
-    grid-template-columns: 1fr 336px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    
 }
     @media(max-width: 767px) {
     .form__element--withButtons {
@@ -166,7 +168,7 @@ max-width: 1200px;
 .form__renderButtons {
     display: grid;
     align-items: end;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
 }
     @media(max-width:767px) {
         .form__renderButtons {
@@ -186,6 +188,7 @@ max-width: 1200px;
     font-size: 16px;
     border: none;
     transition: 0.5s;
+    margin-left: 20px;
 }
 @media(max-width: 767px) {
     .form__renderButton {
