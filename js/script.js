@@ -16,8 +16,9 @@
     };
 
     const removeTask = (taskIndex) => {
-        [
-            ...tasks.splice(taskIndex, 1),
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1),
         ];
         render();
     };
@@ -124,7 +125,7 @@
         };
 
         document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
-        
+
     };
 
     const bindButtonsEvent = () => {
