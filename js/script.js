@@ -115,17 +115,15 @@
     };
 
     const renderButtons = () => {
+        let toggleHideTasksButton = "";
         if (tasks.length >0) {
-            let toggleHideTasksButton = "";
-
             const isAllTasksDone = tasks.every((task) => task.done);
             toggleHideTasksButton += `
             <button class="js-toggleHideTasksButton form__renderButton"> ${hideDoneTasks === true ? "Pokaż" : "Ukryj"} ukończone </button>        
             <button class="js-allTasksDoneButton form__renderButton" ${isAllTasksDone ? 'disabled' : ""} > Ukończ wszystkie </button>
             `;
-
-            document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
         };
+            document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
     };
 
     const bindButtonsEvent = () => {
