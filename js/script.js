@@ -129,8 +129,7 @@
     const bindButtonsEvent = () => {
         bindToggleAllDoneTasks();
         bindOnHideDoneTasksButtonClick();
-        // if - jeżeli są zadania to wyrenderuj mi dwa przyciski "Ukryj ukończone" i "Ukoncz wszystkie", jeżeli jakieś zadania są ukryte to wyrenderuj mi
-        // "Ukryj ukończone" i "Ukończ wszystkie", jeśli wszystkie zadania są ukończone, to zablokuj przycisk "Ukończ wszystkie"
+
     };
 
     const render = () => {
