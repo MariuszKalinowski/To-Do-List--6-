@@ -9,7 +9,7 @@ html {
 body {
     background-color: #eee;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     font-family: "Lato", sans-serif;
     word-break: break-word;
 }

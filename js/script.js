@@ -115,22 +115,35 @@
 
     const renderButtons = () => {
         let toggleHideTasksButton = "";
+<<<<<<< HEAD
 
         if (tasks.length > 0) {
 
+=======
+        if (tasks.length > 0) {
+            const isAllTasksDone = tasks.every((task) => task.done);
+>>>>>>> 285e44bf41ed2da7db8996b0e89d21632c3e38c8
             toggleHideTasksButton += `
             <button class="js-toggleHideTasksButton form__renderButton"> ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>        
             <button class="js-allTasksDoneButton form__renderButton" ${tasks.every(({ done }) => done) ? 'disabled' : ""} > Ukończ wszystkie </button>
             `;
         };
+<<<<<<< HEAD
 
         document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
 
+=======
+        document.querySelector(".js-renderButtons").innerHTML = toggleHideTasksButton;
+>>>>>>> 285e44bf41ed2da7db8996b0e89d21632c3e38c8
     };
 
     const bindButtonsEvent = () => {
         bindToggleAllDoneTasks();
         bindOnHideDoneTasksButtonClick();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 285e44bf41ed2da7db8996b0e89d21632c3e38c8
     };
 
     const render = () => {
