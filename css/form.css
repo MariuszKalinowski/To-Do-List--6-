@@ -1,31 +1,18 @@
 .form {
-margin: 20px;
+margin: 2px 20px 10px 20px;
 max-width: 1200px;
 }
 @media(max-width: 992px) {
     .form {
-        margin: 20px;
+        margin: 2px 20px 10px 20px;
         max-width: 992px;
     }
 }
 @media(max-width: 767px) {
     .form {
-        margin: 20px;
+        margin: 2px 20px 10px 20px;
         max-width: 767px;
     }
-}
-
-.form__header {
-    margin-top: 50px;
-    
-}
-
-.form__element {
-    margin-top: 2px;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: #fff;
 }
 
 .form__element--first {
@@ -79,104 +66,7 @@ max-width: 1200px;
         transform: scale(1);
     }
 }
-.form__section--last {
-    margin-top: 10px;
-}
 
-.form__tasksList {
-    background-color: white;
-    padding: 10px;
-    margin-top: 2px;
-    
-    
-}
-.form__task {
-    margin-top: 2px;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-gap: 0px 20px;
-    border-bottom: 1px solid #e2dfdf;
-    padding: 10px 20px;
-    display: grid;
-    align-items: center;
-}
-.form__task--done {     
-    margin-top: 2px;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-gap: 0px 20px;
-    border-bottom: 1px solid #e2dfdf;
-    padding: 10px 20px;
-    display: grid;
-    align-items: center;
-}
-
-.form__task--done .form__taskContent {
-    text-decoration: line-through;
-  
-}
-
-.form__removeTaskButton {
-    
-    width: 30px;
-    height: 30px;
-    background-color: hsl(0, 100%, 50%);
-    color: white;
-    padding: 8px;
-    border: none;
-    transition: 0.5s;
-}
-
-.form__removeTaskButton:hover {
-    background-color: hsl(0, 100%, 60%);
-}
-
-.form__doneTaskButton {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: hsl(120, 100%, 25%);
-    color: white;
-    padding: 8px;
-    transition: 0.5s;
-}
-
-.form__doneTaskButton:hover {
-
-    background-color:hsl(120,100%,35%);
-}
-
-.form__task-hidden {
-    display: none;
-}
-.form__element--withButtons {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    
-}
-    @media(max-width: 767px) {
-    .form__element--withButtons {
-        display: flex;
-        flex-wrap: wrap;
-        flex-basis: 100%;        
-    }
-}
-
-.form__renderButtons {
-    display: grid;
-    align-items: end;
-    grid-template-columns: auto auto;
-}
-    @media(max-width:767px) {
-        .form__renderButtons {
-            display: flex;
-            flex-wrap: wrap;
-            flex-basis: 100%;
-        }
-    }
 .form__renderButton {
 
     background-color: white;
