@@ -1,0 +1,38 @@
+.section__element {
+    margin: 2px 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+.section--last {
+    margin-top: 10px;
+}
+
+.section__renderButtons {
+    display: grid;
+    align-items: end;
+    grid-template-columns: auto auto;
+}
+    @media(max-width:767px) {
+        .section__renderButtons {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+        }
+    }
+
+.section__element--withButtons {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    
+}
+    @media(max-width: 767px) {
+    .section__element--withButtons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;        
+    }
+}    
